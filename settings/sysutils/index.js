@@ -1,3 +1,7 @@
+//This is shamelessy taken from here:
+//http://onemoredigit.com/post/1527191998/extending-objects-in-node-js
+//All credits go to the author, which is not me
+
 Object.defineProperty(Object.prototype, "extend", {
     enumerable: false,
     value: function(from) {

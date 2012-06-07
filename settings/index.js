@@ -30,7 +30,6 @@ configs.forEach(function(element, index, array){
         element.exists = path.existsSync(element.path);
         if (element.exists) {
             element.config = require(element.path);
-	    console.log('Inspect the results of require: ', util.inspect(element.config));  
         }
     });
 
