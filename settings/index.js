@@ -46,9 +46,7 @@ else if (userConfig.exists || defaultConfig.exists) {
             resultConfig = userConfig.config;
         } else {
             console.log('Only default config exists');
-            console.log('Inspect defaultConfig: ', util.inspect(defaultConfig));    
             resultConfig = defaultConfig.config;
-            console.log('Inspect resultConfig: ', util.inspect(resultConfig));    
         }
     }
 else {
@@ -56,6 +54,4 @@ else {
     process.exit(1);
     }
 
-console.log('Resulting config is: \n', util.inspect(resultConfig));
-    
 module.exports = resultConfig;
