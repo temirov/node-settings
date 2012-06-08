@@ -11,7 +11,9 @@ If both are present, they will be merged, giving <username>.settings.js a prefer
 
 Settings files shall be put in settings folder. To add user settings you can start with executing
 
+```shell
 cp settings/default.settings.js settings/`whoami`.settings.js
+```
 
 then edit both default and <user> files accordingly.
 
