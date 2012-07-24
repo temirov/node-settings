@@ -1,8 +1,17 @@
 {
     "name": "node-settings"
   , "version": "0.0.2"
-  , "private": true
-  , "dependencies": {
-
+  , "description": "A module to manage settings of node.js applications on per user basis"
+  , "keywords": "settings, users, default settings"
+  , "author": "Vadym Tyemirov <vadym@temirov.net> (http://about.me/temirov/)"
+  , "main": "index.js"
+  ,"repository": {
+    "type": "git",
+    "url": "git://github.com/temirov/node-settings.git"
   }
+  ,"engines": {
+    "node": ">= 0.3.0"
+  }
+  , "private": false
+  , "dependencies": {}
 }
