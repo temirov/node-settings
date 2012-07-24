@@ -1,9 +1,8 @@
 {
     "name": "node-settings"
-  , "version": "0.0.1"
+  , "version": "0.0.2"
   , "private": true
   , "dependencies": {
-//      "apn": ">=1.1.7"
-//    , "async": ">=0.1.21"
+
   }
 }
