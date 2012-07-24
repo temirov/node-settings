@@ -71,9 +71,12 @@ else {
     console.log(errMessage);
     process.exit(1);
     }
-
+//Handle uncaught exceptions
 process.on('uncaughtException', function(err) {
   console.log('An error occured: %s', err);
 });
 
+//resultConfig variable gets .config assigned. 
+//Only the config variables are exported
+//no service functions like fullPath etc are exposed  
 module.exports = resultConfig;
