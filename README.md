@@ -14,4 +14,3 @@ cp settings/default.settings.js settings/`whoami`.settings.js
 ```
 
 Then edit both default and ``<user>`` files accordingly.
-
