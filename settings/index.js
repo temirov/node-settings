@@ -4,7 +4,7 @@ var path              = require('path'),
     util              = require('util'),
     sysutil           = require('./sysutils');
 
-//define file's name convention    
+//define file's name convention
 var CONFFILEPOSTFIX   = 'settings.js';
 var defaultConfigName = 'default';
     
@@ -16,18 +16,18 @@ var currentFolder = __dirname;
 
 //Switching to asynchronous approach
 function buildFileName(fileBaseName, callback){
-  //the operations here are synchronous 
+  //the operations here are synchronous
   //so we can use try/catch constructor for error handling
-  try { 
+  try {
     var fileName = util.format('%s.%s', fileBaseName, CONFFILEPOSTFIX);
     //path.join correctly processes all the dots and slashes
     var fullPath = path.join(currentFolder, fileName);
     callback(null, fullPath);
-  } 
+  }
   catch (err) {
     callback(err, null);
   }
-};
+}
 
 var userConfig = { _baseFileName : userName };
 var defaultConfig = { _baseFileName : defaultConfigName };
@@ -59,7 +59,7 @@ if (userConfig.exists && defaultConfig.exists) {
 else if (userConfig.exists) {
     console.log('Only user config exists');
     resultConfig = userConfig.config;
-  } 
+  }
 else if (defaultConfig.exists) {
     console.log('Only default config exists');
     resultConfig = defaultConfig.config;
@@ -76,7 +76,7 @@ process.on('uncaughtException', function(err) {
   console.log('An error occured: %s', err);
 });
 
-//resultConfig variable gets .config assigned. 
+//resultConfig variable gets .config assigned.
 //Only the config variables are exported
-//no service functions like fullPath etc are exposed  
+//no service functions like fullPath etc are exposed
 module.exports = resultConfig;
